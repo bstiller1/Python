@@ -10,7 +10,8 @@ html = """
 <h3>Welcome</h3>
 <hr />
 <p>%s</p>
-<hr />"""
+<hr />
+<a href='logout.py' title='Logout'>Logout</a><br />"""
 
 form = """
 <title>Python Auth</title>
@@ -27,11 +28,11 @@ form = """
 cookie_string = os.environ.get('HTTP_COOKIE')
 
 # check for cookie
-if "User" in cookie_string:
+if "user1" in cookie_string:
 	print(html % "User Cookie found")
 	# if cookie found check for user
-	if "user1" in cookie_string:
-		print("User:user1 was found")
+	#if "user1" in cookie_string:
+		#print("User:user1 was found")
 else:
 	# if cookie not found, show login form
 	print(form)

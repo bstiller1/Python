@@ -3,7 +3,7 @@
 import cgi, Cookie, os
 
 form = cgi.FieldStorage()
-user = form["uname"].value
+user = form["user"].value
 
 print("Content-Type: text/html;charset=utf-8;")
 print("Set-Cookie:User="+user+";expires=Thurs, Oct 29 2015 13:00:00 GMT;path=/;domain=blakestiller.com;")
